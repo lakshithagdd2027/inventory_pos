@@ -56,12 +56,19 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <body class="dashboard-body">
 
 <div class="dashboard-container">
-    <aside class="sidebar">
+   <aside class="sidebar">
         <h2>SmartPOS</h2>
         <ul>
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="pos.php">Point of Sale</a></li>
-            <li><a href="inventory.php" style="color: #3498db;">Manage Inventory</a></li>
+            
+            <?php if ($_SESSION['role'] === 'Admin'): ?>
+                <!-- The color style just highlights which page you are on -->
+                <li><a href="inventory.php" style="color: #3498db;">Manage Inventory</a></li>
+                <!-- This is the line that was missing! -->
+                <li><a href="users.php">Manage Users</a></li>
+            <?php endif; ?>
+
             <li><a href="logout.php">Logout</a></li>
         </ul>
     </aside>

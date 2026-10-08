@@ -94,7 +94,7 @@ $products = $pdo->query("SELECT * FROM Products WHERE stock_quantity > 0 ORDER B
             
             <?php if ($_SESSION['role'] === 'Admin'): ?>
                 <li><a href="inventory.php">Manage Inventory</a></li>
-                <li><a href="#">Manage Users</a></li>
+                <li><a href="users.php">Manage Users</a></li>
             <?php endif; ?>
 
             <li><a href="logout.php">Logout</a></li>
