@@ -27,7 +27,7 @@ if (!isset($_SESSION['user_id'])) {
             
             <!-- These links only appear for Admins -->
             <?php if ($_SESSION['role'] === 'Admin'): ?>
-                <li><a href="#">Manage Inventory</a></li>
+                <li><a href="inventory.php">Manage Inventory</a></li>
                 <li><a href="#">Manage Users</a></li>
             <?php endif; ?>
 

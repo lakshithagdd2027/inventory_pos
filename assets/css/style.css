@@ -99,3 +99,57 @@ button:hover {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
+
+/* --- INVENTORY STYLES --- */
+.form-inline {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.form-inline input {
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+}
+.btn {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn:hover {
+  background-color: #2980b9;
+}
+.inventory-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+.inventory-table th,
+.inventory-table td {
+  border: 1px solid #ecf0f1;
+  padding: 12px;
+  text-align: left;
+}
+.inventory-table th {
+  background-color: #2c3e50;
+  color: white;
+}
+.inventory-table tr:hover {
+  background-color: #f9f9f9;
+}
+.btn-delete {
+  background-color: #e74c3c;
+  color: white;
+  padding: 6px 12px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+.btn-delete:hover {
+  background-color: #c0392b;
+}
