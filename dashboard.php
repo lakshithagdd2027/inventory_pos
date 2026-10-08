@@ -23,7 +23,7 @@ if (!isset($_SESSION['user_id'])) {
         <h2>SmartPOS</h2>
         <ul>
             <li><a href="dashboard.php">Dashboard</a></li>
-            <li><a href="#">Point of Sale</a></li>
+            <li><a href="pos.php">Point of Sale</a></li>
             
             <!-- These links only appear for Admins -->
             <?php if ($_SESSION['role'] === 'Admin'): ?>

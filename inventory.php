@@ -60,7 +60,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <h2>SmartPOS</h2>
         <ul>
             <li><a href="dashboard.php">Dashboard</a></li>
-            <li><a href="#">Point of Sale</a></li>
+            <li><a href="pos.php">Point of Sale</a></li>
             <li><a href="inventory.php" style="color: #3498db;">Manage Inventory</a></li>
             <li><a href="logout.php">Logout</a></li>
         </ul>
