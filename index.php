@@ -1,22 +1,21 @@
 <?php
 session_start();
 require_once 'db.php';
-
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $stmt = $pdo->prepare("SELECT * FROM Users WHERE username = :username AND password = :password");
-    $stmt->execute(['username' => $username, 'password' => $password]);
+    $stmt = $pdo->prepare("SELECT * FROM Users WHERE username = :username");
+    $stmt->execute(['username' => $username]);
     $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
-    if ($user) {
+    // SECURITY UPGRADE: password_verify checks the encrypted hash
+    if ($user && password_verify($password, $user['password'])) {
         $_SESSION['user_id'] = $user['id'];
         $_SESSION['username'] = $user['username'];
         $_SESSION['role'] = $user['role']; 
-        
         header("Location: dashboard.php");
         exit();
     } else {

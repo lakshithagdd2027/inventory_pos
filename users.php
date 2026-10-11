@@ -10,10 +10,10 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'Admin') {
 
 $message = '';
 
-// Handle Add User
+// Inside users.php - Handle Add User
 if (isset($_POST['add_user'])) {
     $username = $_POST['username'];
-    $password = $_POST['password'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT); // ENCRYPT HERE
     $role = $_POST['role'];
 
     try {

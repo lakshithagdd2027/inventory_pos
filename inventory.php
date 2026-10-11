@@ -61,7 +61,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <ul>
             <li><a href="dashboard.php">Dashboard</a></li>
             <li><a href="pos.php">Point of Sale</a></li>
-            
+            <li><a href="report.php">Sales Report</a></li>
             <?php if ($_SESSION['role'] === 'Admin'): ?>
                 <!-- The color style just highlights which page you are on -->
                 <li><a href="inventory.php" style="color: #3498db;">Manage Inventory</a></li>
